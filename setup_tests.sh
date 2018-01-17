@@ -28,7 +28,7 @@ if [[ -z "${GOOGLE_CLOUD_PROJECT}" ]]; then
 fi
 
 gcloud version
-sudo apt remove gcloud
+sudo apt remove google-cloud-sdk
 
 # Install gcloud command-line utility
 # https://cloud.google.com/sdk/
