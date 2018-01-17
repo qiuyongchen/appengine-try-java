@@ -27,6 +27,7 @@ if [[ -z "${GOOGLE_CLOUD_PROJECT}" ]]; then
 	exit 1
 fi
 
+gcloud version
 
 # Install gcloud command-line utility
 # https://cloud.google.com/sdk/
