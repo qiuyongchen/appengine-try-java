@@ -52,6 +52,20 @@ if ! command -v gcloud  >/dev/null 2>&1; then
 	)
 fi
 
+	cd "${HOME}"
+
+        echo "ready to wget"
+	wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix="${HOME}"
+        echo "done"
+
+        echo "ready to tar"
+	tar xzf google-cloud-sdk.tar.gz
+        echo "done"
+
+        echo "ready to run sh"
+	./google-cloud-sdk/install.sh --usage-reporting false --path-update false --command-completion false
+        echo "done"
+
 echo "ready to update app-engine-java"
 gcloud -q components update app-engine-java
 echo "done"
