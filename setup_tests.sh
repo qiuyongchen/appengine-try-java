@@ -79,4 +79,4 @@ gcloud -q auth activate-service-account --key-file "${GOOGLE_APPLICATION_CREDENT
 gcloud -q config set project "${GOOGLE_CLOUD_PROJECT}"
 gcloud info
 
-mvn appengine:deploy
+

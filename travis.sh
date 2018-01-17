@@ -33,6 +33,9 @@ test_localhost() {
 		git clone https://github.com/GoogleCloudPlatform/java-repo-tools.git
 	fi
   ./java-repo-tools/scripts/test-localhost.sh appengine:run . -- -DcloudSdkPath="$GOOGLE_CLOUD_SDK_ROOT"
+
+  mvn appengine:deploy
+  echo "deploy success"
 }
 
 test_localhost
