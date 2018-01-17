@@ -14,7 +14,7 @@
 
 sudo: required
 language: java
-group: deprecated-2017Q4
+
 jdk:
   - oraclejdk8
 addons:
@@ -27,7 +27,7 @@ before_install:
 install: sudo ./setup_tests.sh
 script: ./travis.sh
 after_success:
-  - mvn clean cobertura:cobertura coveralls:report
+  - mvn clean 
 branches:
   only:
   - master
