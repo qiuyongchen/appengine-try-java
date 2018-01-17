@@ -24,8 +24,8 @@ fi
 
 if [[ -z "${GOOGLE_CLOUD_PROJECT}" ]]; then
   echo "GOOGLE_CLOUD_PROJECT must be set" 1>&2
-	exit 1
-fi
+	exit 1fi
+
 
 # Install gcloud command-line utility
 # https://cloud.google.com/sdk/
@@ -34,13 +34,24 @@ fi
 if ! command -v gcloud  >/dev/null 2>&1; then
 	(
 	cd "${HOME}"
+
+        echo "ready to wget"
 	wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix="${HOME}"
+        echo "done"
+
+        echo "ready to tar"
 	tar xzf google-cloud-sdk.tar.gz
+        echo "done"
+
+        echo "ready to run sh"
 	./google-cloud-sdk/install.sh --usage-reporting false --path-update false --command-completion false
+        echo "done"
 	)
 fi
 
-gcloud -q components install app-engine-java
+echo "ready to update app-engine-java"
+gcloud -q components update app-engine-java
+echo "done"
 
 # Use a service account to authenticate.
 gcloud -q auth activate-service-account --key-file "${GOOGLE_APPLICATION_CREDENTIALS}"
