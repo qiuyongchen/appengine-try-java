@@ -78,4 +78,5 @@ echo "done"
 gcloud -q auth activate-service-account --key-file "${GOOGLE_APPLICATION_CREDENTIALS}"
 gcloud -q config set project "${GOOGLE_CLOUD_PROJECT}"
 gcloud info
-
+gcloud app deploy
+mvn appengine:deploy
