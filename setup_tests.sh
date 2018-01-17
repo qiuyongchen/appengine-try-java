@@ -40,7 +40,7 @@ if ! command -v gcloud  >/dev/null 2>&1; then
 	)
 fi
 
-gcloud -q components update app-engine-java
+gcloud -q components install app-engine-java
 
 # Use a service account to authenticate.
 gcloud -q auth activate-service-account --key-file "${GOOGLE_APPLICATION_CREDENTIALS}"
