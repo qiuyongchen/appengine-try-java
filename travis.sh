@@ -34,7 +34,9 @@ test_localhost() {
 	fi
   ./java-repo-tools/scripts/test-localhost.sh appengine:run . -- -DcloudSdkPath="$GOOGLE_CLOUD_SDK_ROOT"
 
-  mvn appengine:deploy --debug 
+  curl --silent --output /dev/stderr  http://localhost:8080/demo
+
+  mvn appengine:deploy --debug
   echo "deploy success"
 }
 
