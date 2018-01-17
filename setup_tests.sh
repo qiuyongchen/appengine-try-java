@@ -66,6 +66,10 @@ fi
 	./google-cloud-sdk/install.sh --usage-reporting false --path-update false --command-completion false
         echo "done"
 
+        source /home/travis/google-cloud-sdk/completion.bash.inc
+
+        source /home/travis/google-cloud-sdk/path.bash.inc
+
 echo "ready to update app-engine-java"
 gcloud -q components update app-engine-java
 echo "done"
