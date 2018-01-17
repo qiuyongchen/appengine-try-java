@@ -24,7 +24,8 @@ fi
 
 if [[ -z "${GOOGLE_CLOUD_PROJECT}" ]]; then
   echo "GOOGLE_CLOUD_PROJECT must be set" 1>&2
-	exit 1fi
+	exit 1
+fi
 
 
 # Install gcloud command-line utility
