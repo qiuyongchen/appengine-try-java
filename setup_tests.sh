@@ -51,7 +51,7 @@ if ! command -v gcloud  >/dev/null 2>&1; then
 fi
 
 echo "ready to update app-engine-java"
-#gcloud -q components update app-engine-java
+gcloud -q components update app-engine-java
 echo "done"
 
 # Use a service account to authenticate.
