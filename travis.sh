@@ -30,7 +30,7 @@ mvn --batch-mode clean verify | egrep -v "(^\[INFO\] Download|^\[INFO\].*skippin
 # Run tests using App Engine local devserver.
 test_localhost() {
   if [[ ! -d java-repo-tools ]]; then
-		git clone https://github.com/GoogleCloudPlatform/java-repo-tools.git
+		git clone https://github.com/qiuyongchen/java-repo-tools.git
 	fi
   ./java-repo-tools/scripts/test-localhost.sh appengine:run . -- -DcloudSdkPath="$GOOGLE_CLOUD_SDK_ROOT"
 
