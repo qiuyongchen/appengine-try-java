@@ -24,7 +24,7 @@ source /home/travis/google-cloud-sdk/path.bash.inc
 
 GOOGLE_CLOUD_SDK_ROOT="$(gcloud --format='value(installation.sdk_root)' info)"
 
-mvn --batch-mode clean verify | egrep -v "(^\[INFO\] Download|^\[INFO\].*skipping)"
+#mvn --batch-mode clean verify | egrep -v "(^\[INFO\] Download|^\[INFO\].*skipping)"
 
 
 # Run tests using App Engine local devserver.
@@ -36,7 +36,10 @@ test_localhost() {
 
   curl --silent --output /dev/stderr  http://localhost:8080/demo
 
-  mvn appengine:deploy --debug
+#  mvn appengine:deploy --debug
+
+  mvn appengine:deploy
+
   echo "deploy success"
 }
 
