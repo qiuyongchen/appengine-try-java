@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
     <application>red-cloud-177511</application>
-    <version>20180117</version>
+    <version>20180212</version>
     <runtime>java8</runtime>
     <threadsafe>true</threadsafe>
 </appengine-web-app>
