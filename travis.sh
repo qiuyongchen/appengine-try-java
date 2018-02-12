@@ -18,7 +18,7 @@ set -x
 # Set pipefail so that `egrep` does not eat the exit code.
 set -o pipefail
 
-#2018-02-12 17:55:14
+#2018-02-12 17:55:14 s
 
 source /home/travis/google-cloud-sdk/completion.bash.inc
 
